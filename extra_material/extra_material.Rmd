@@ -1,0 +1,48 @@
+---
+class: inverse, center, middle
+
+# Monetizing Non-advertising Based Apps 
+
+---
+class: font150
+# Motivation
+
+**Strategic Question**: How to monetize an existing user base within an app?
+
+
+Why Relevant?
+
+* Revenue generation from *existing* users is not well understood 
+* Alternative monetization strategies available
+
+**Data driven approach**:
+
+* Field Experiments
+* Online Education app (K - 12)
+
+---
+# Monetization Strategies 
+
+**Hard Landing** 
+
+* "bulletproof" paywall 
+* Users then split by type:
+  * Users who value app highly stay and pay 
+  * Users who are price sensitive churn
+  * Attract new users via promotions
+
+**Soft Landing**
+
+* Extends "hard landing" approach
+* By offering free version with limited functionality forever, OR 
+* Unlimited functionality for limited period of time
+
+**approx 75% of managers prefer soft landing approach**
+
+---
+# Experiment 1 Design
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/free2paid_exp1_design.png"
+knitr::include_graphics(url)
+```

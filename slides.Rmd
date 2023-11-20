@@ -1,5 +1,5 @@
 ---
-title: "MODULE NAME"
+title: "Mobile Marketing"
 subtitle: "Digital and Social Media Strategies"
 author: "Lachlan Deer"
 institute: "Tilburg University"
@@ -13,21 +13,503 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-class: font200
+class: font160
 
 # Learning Goals for this Week
 
-TBD
+* Explain how introduction of a new mobile app influences consumer behaviour
+* Discuss how Real Time Targeting via a mobile app influences shopping behaviour in the short- and long- term 
+* Identify how free versions of paid apps impact consumer demand
+* Explain mechanisms through which free apps influence demand for paid apps
+
+
+---
+class: font160
+# Topic Coverage 
+
+Mobile App Adoption and Multichannel Purchasing
+
+* [Xu and Kannan (2021)](https://doi.org/10.1177/002224372098825)
+
+Real Time in App Targeting
+
+* [Tong, Wang, Luo & Moriguchi (2021)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3931110)
+
+Spillover Effects and Freemium Strategies 
+
+* [Deng, Lambrecht and Liu (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3149550)
+
+Monetizing Non-advertising Based Apps 
+
+* [Cao, Chintagunta and Li (2022)](https://doi.org/10.1177/00222437221131562)
+* (Recommended only - we won't cover in lecture)
+
+---
+# Focus on the Authors 
+
+.pull-left[
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "https://marvel-b1-cdn.bc0a.com/f00000000166018/www.analysisgroup.com/globalassets/content/experts_and_staff/affiliated_experts/lambrecht_anja.jpg"
+knitr::include_graphics(url)
+```
+]
+
+.pull-right[
+**Anja Lambrecht**
+
+* Prof at London Business School
+* Research in Digital Markets using experiments
+* Online targeting, advertising
+* Social Media, Online content and mobile apps
+]
+
+---
+# Focus on the Authors 
+
+.pull-left[
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "https://www.rug.nl/gdbc/blog/dr-pk-kannan-appointed-professor-by-special-appointment-of-digital-business-analytics-09-11-2018!attachment?c=images/blog-image-normal.jpg"
+knitr::include_graphics(url)
+```
+]
+
+.pull-right[
+**P.K Kannan**
+
+* Prof at U Maryland
+* Research in Digital Markets 
+* Mobile Apps, Firm Generated Content, Privacy, Crowdfunding
+]
 
 ---
 class: inverse, center, middle
 
-# Section XX
+# Mobile App Adoption and Multichannel Purchasing
 
 ---
-# Slide Title 
+class: font140
+# Motivation 
 
-course content here
+**Strategic Question**: Does the introduction of a mobile app provide necessary ROI?
+
+* Particularly in highly competitive industries
+
+Why Relevant?
+
+* Competitive Industries (may) feature:
+  * Lots of consumer search 
+  * Infrequent purchase from a given brand
+  * Lots of competing apps
+
+**Data driven approach**:
+
+* "Natural Experiment": Introduction of a Mobile App 
+  * Background issue: downloading an app is not random assignment
+* Industry: Hotels 
+
+---
+
+# Not the first paper in this space ...
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/adoption_litreview.png"
+knitr::include_graphics(url)
+```
+
+Why **this** paper (in the authors mind)?
+
+* Competitive industry
+* Consumer search / research is a dominant feature
+
+---
+class: font140
+# The Experiment 
+
+**Outcome Variable**: Spending
+
+**Treatment**: Adoption (download) of the app
+
+* Which is not randomly assigned ...
+  * They try to deal with this via fancier tweaks to method
+* Six cohorts of adopters 
+  * 10K users from each cohort included in sample
+
+**Control Group** : Users who have not yet adopted the app 
+
+  * We're going to see many cross cohort comparisons
+  * But not the "next nearest" cohort
+
+**Analysis**: Difference in Differences
+
+---
+class: font140
+# Cohort Comparisons
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/adoption_cohort_comparisons.png"
+knitr::include_graphics(url)
+```
+
+Approach is (binary) **cross cohort comparisons** 
+
+Why **not** just have **one control group**?
+
+* Control group would **change in composition over time** 
+* Recent work on Diff in Diff finds this **causes problems**
+
+Does **not** include **nearest cohort** of adopters 
+
+* Because they might have **different behaviour near adoption** 
+
+---
+# Graphical Evidence
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+url <- "figs/adoption_cohort_spend.png"
+knitr::include_graphics(url)
+```
+
+---
+# Main Results 
+
+.center[**Outcome variable is log spending**]
+
+```{r, echo = FALSE, fig.align = "center", out.width="85%"}
+url <- "figs/adoption_main_results.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Main Results - Summary
+
+We'll focus on the **DID results** ... 
+
+* **Spending across all channels declines** by more than **10% after adoption** 
+* **Stronger** decline for **Third-Party Channels** than Direct
+
+Remark:
+
+* Other estimates (DID Heckman and DID-Matching) try to handle the non-random adoption 
+* We'll not worry about those
+
+
+---
+# Is it due to bad app quality? 
+
+.pull-left[
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/adoption_searches.png"
+knitr::include_graphics(url)
+```
+]
+
+.pull-right[
+**Bad quality app** $\rightarrow$ 
+
+* Consumers wouldn't use it
+* Usage likely declines after adoption 
+
+There's **no evidence** of that here...
+
+* Usage seems to stay constant / increase over time 
+* For searches
+* (What about other variables?)
+
+]
+
+---
+class: font150
+# Is it due to Competition?
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/adoption_competition.png"
+knitr::include_graphics(url)
+```
+
+.center[**Spending decline is stronger when more apps on the market**] 
+
+Why? 
+
+* More competition
+* Consumers search around 
+* ... On other apps too
+
+---
+class: font160
+# Takeaways
+
+**Before this paper**, we believed 
+
+* Mobile **apps make it easier for customers to engage directly with a firm's product** 
+  * Suggests that might increase spending and retention
+
+But findings suggest this **might not always be the case**
+
+* In a highly competitive market (hotels) that does not lead to more spending 
+  * Consumer's **use the app to search** 
+  * But do so for competing firms too 
+  * Likely **finding the best deal for them** 
+  * Which is **not always the focal firm** ... so spending declines 
+
+
+---
+class: inverse, center, middle
+
+# Real Time in App Targeting
+
+---
+class: font150
+# Motivation
+
+**Strategic Question**: Does Real Time Targeting lead to more consumer engagement with the firm?
+
+
+Why Relevant?
+
+* Mobile tracking is ubiquitous 
+* Might facilitate purchases now and in future, vs 
+* Consumers can feel targeted promotions have a "creep" factor
+
+**Data driven approach**:
+
+* Field Experiment at large Japanese Fashion Retailer
+* A/B Test style Regressions
+  * (with controls ... which may be an issue statistically)
+
+---
+class: font150
+# Experiment
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/rtt_expdesign.png"
+knitr::include_graphics(url)
+```
+
+**Sample**: approx 16,500 users, year: 2017
+
+**Incentives**: (avg expenditure is 20USD)
+
+* Low: 200 points roughly 2 USD cash value 
+* High: 500 points roughly 5 USD cash value
+
+---
+class: font150
+# RTT and Current Shopping 
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/rtt_current.png"
+knitr::include_graphics(url)
+```
+
+Findings: 
+
+* RTT not effective in early stage 
+* RTT effective in Late Stage 
+  * 12.1% increase in visits
+  * 32% increase in products purchased
+
+---
+class: font150
+# Early Stage RTT and Future Shopping 
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/rtt_future_early.png"
+knitr::include_graphics(url)
+```
+
+.center[**Low and High in early stage both improve KPIs in the next 30 days**]
+
+* High incentives more effective
+  * Note: 2000 JPY approx 13.50 USD
+
+---
+class: font150
+# Late Stage RTT and Future Shopping 
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/rtt_future_late.png"
+knitr::include_graphics(url)
+```
+
+.center[**Similar effect between early and late stage targeting over 30 day period**]
+
+* How do we see this? 95% Confidence intervals overlap
+
+---
+class: font150
+# Prior Purchase and Late Stage RTT
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/rtt_attenuate_late.png"
+knitr::include_graphics(url)
+```
+
+.center[**Prior purchase history decreases effectivess of late state RTT**]
+
+* Remark: Unclear how they define prior purchases...
+
+---
+class: font150
+# Prior Purchase and Early Stage RTT
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/rtt_amplify_early.png"
+knitr::include_graphics(url)
+```
+
+.center[**Prior purchase history amplifies effectivess of late state RTT**]
+
+---
+class: font150
+# Takeaways
+
+**Findings**:
+
+* Targeting on mobile apps has causal (positive!) impacts on consumer's purchase behaviour 
+
+* Prior purchases attenuate RTT effectiveness of late stage promotion ...
+  * ... Authors argue this is due to privacy concerns 
+
+* Prior purchases amplify RTT effectiveness of early stage promotion
+
+**Implications**: 
+
+* RTT on mobile works, is effective, has positive ROI
+* Care might be needed when targeting in late stages of purchases if consumers are concerned about privacy
+
+---
+class: inverse, center, middle
+
+# Spillover Effects and Freemium Strategies 
+
+---
+class: font150
+# Motivation
+
+**Strategic Question**: When is offering a free version of an app alongside a paid version effective?
+
+
+Why Relevant?
+
+* Freemium is a prevalent pricing model for mobile apps
+* Tradeoff between letting consumers sample and cannibalizing demand 
+  * Unclear which effect might dominate
+
+**Data driven approach**:
+
+* Apps on the App Store 
+* Natural Experiment: Launch of free version
+
+---
+class: font130
+# Experiment
+
+**Sample**: Games on App Store September 2011 to October 2013 
+
+* 2,531 games launched over this period where free launched after paid
+* Focus on 4 weeks around launch of free version
+
+**Outcome** Variable: 
+  * Ideal: Downloads, but unavailable
+  * Actual: Number of Ratings
+
+**Treatment**: Free Version Launch 
+
+
+**Treatment Group**: Apps who have a free version launched
+
+**Control Group**: Paid apps that ...
+
+1. Same Genre as Freemium App 
+2. Control not developed by same developer
+3. Time between launches less than 6 months 
+4. Similar Update strategies 
+
+---
+# Main Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/freemium_did.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font160
+# Product Sampling?
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/freemium_star_rating.png"
+knitr::include_graphics(url)
+```
+
+.center[
+**Inverted U-shape** $\rightarrow$ greatest effect for moderate star ratings
+]
+
+---
+class: font120
+# Product Discovery
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/freemium_crowding.png"
+knitr::include_graphics(url)
+```
+
+.center[**Smaller effected in crowded markets**]
+
+Remark: focus is free then paid 
+
+* To minimize role of sampling
+
+---
+class: font160
+# Which Effect Dominates?
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/freemium_sampling_vs_discovery.png"
+knitr::include_graphics(url)
+```
+
+.center[
+**Sampling Effect dominates** 
+]
+
+---
+class: font150
+# Takeaways
+
+* **Freemium** is a **dominant strategy** in digital markets 
+
+* Findings suggest **free version leads to higher demand for paid** 
+  * Rather than cannibalization 
+
+* Mechanisms at work: **Sampling** and **Product Discovery**
+
+Implications: 
+
+* Freemium can increase demand for paid versions
+
+---
+class: inverse, center, middle
+# Recap
+
+---
+class: font150
+# Summary
+
+* In **competitive markets** consumers who **adopt a firm's app** may **not purchase more** from them 
+  * Decreases search costs, but competiting firms may have better deals 
+
+* **Real Time Targeting** within an app is **effective** way to **increase current & future purchases** 
+  * Though timing of discounts for experienced consumers could be sensitive 
+
+* **Spillover effects** rather than cannibalization of **demand** between **free and paid** version of apps 
+  * Workds via consumer sampling and product discovery
 
 ---
 # License & Citation
@@ -36,7 +518,7 @@ Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
 @misc{deerdsms2022,
-      title={"Digital and Social Media Strategies: Lecture Slide Template"},
+      title={"Digital and Social Media Strategies: Mobile Marketing"},
       author={Lachlan Deer},
       year={2022},
       url = "https://github.com/tisem-digital-marketing/dsms-lecture-template"
