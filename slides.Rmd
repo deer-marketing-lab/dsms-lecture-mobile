@@ -22,79 +22,128 @@ class: font160
 * Identify how free versions of paid apps impact consumer demand
 * Explain mechanisms through which free apps influence demand for paid apps
 
+---
+class: inverse, center, middle
+
+# Preliminaries
+
+---
+class: font160
+# Where Are We Now? 
+
+Course Themes:
+
+1. Classical Approaches to Measuring Advertising Effects
+2. Modern Evaluation of Digital Advertising Effects
+2. User Generated Content & Social Media
+3. **Email & Mobile Marketing**
+4. Issues in (Massive) Online Marketplaces
+5. Impact of Privacy Regulations 
+
+
+---
+class: font160
+# Our learning journey... 
+
+.center[.font120[`r icons::fontawesome("rocket", style = "solid")` Casual effects of mobile marketing strategies]]
+
+<br>
+
+*Previously*: Understanding Email Marketing Effectiveness
+
+**Today**: **Mobile (App) Marketing**
+
+*Next Week*: Online Retail
+
+
 
 ---
 class: font160
 # Topic Coverage 
 
-Mobile App Adoption and Multichannel Purchasing
+What are the impacts of app creation on product adoption and purchase behaviour?
 
 * [Xu and Kannan (2021)](https://doi.org/10.1177/002224372098825)
 
-Real Time in App Targeting
+Is there value in targeting consumers based on app use in real time?
 
 * [Tong, Wang, Luo & Moriguchi (2021)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3931110)
 
-Spillover Effects and Freemium Strategies 
+Should a firm release both free and paid version of an app?
 
 * [Deng, Lambrecht and Liu (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3149550)
 
-Monetizing Non-advertising Based Apps 
-
-* [Cao, Chintagunta and Li (2022)](https://doi.org/10.1177/00222437221131562)
-* (Recommended only - we won't cover in lecture)
+---
+class: inverse, center, middle
+# Mobile Marketing: Some Background
 
 ---
-# Focus on the Authors 
+class: font160
+# What is Mobile Marketing?
 
-.pull-left[
+**Mobile Marketing**: Any promotional activity that takes place on smartphones and other handheld devices such as tablets
 
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "https://marvel-b1-cdn.bc0a.com/f00000000166018/www.analysisgroup.com/globalassets/content/experts_and_staff/affiliated_experts/lambrecht_anja.jpg"
-knitr::include_graphics(url)
-```
-]
+Examples include: 
 
-.pull-right[
-**Anja Lambrecht**
+* Apps
+* Push notifications / In-app messaging
+* Personalization 
 
-* Prof at London Business School
-* Research in Digital Markets using experiments
-* Online targeting, advertising
-* Social Media, Online content and mobile apps
-]
+... i.e. it's more than *mobile advertising*
+
+App creators care a lot about **customer retention** 
 
 ---
-# Focus on the Authors 
+# Mobile Marketing: Stylized Facts
 
-.pull-left[
 
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "https://www.rug.nl/gdbc/blog/dr-pk-kannan-appointed-professor-by-special-appointment-of-digital-business-analytics-09-11-2018!attachment?c=images/blog-image-normal.jpg"
+
+```{r, echo = FALSE, fig.align = "center", out.width="35%"}
+url <- "https://ontargetinteractive.com/wp-content/uploads/2017/02/infographicmobile2.png"
 knitr::include_graphics(url)
 ```
-]
 
-.pull-right[
-**P.K Kannan**
+.font80[Source: [On Target Interactive (2017)](https://ontargetinteractive.com/what-does-a-mobile-marketing-agency-do/)]
 
-* Prof at U Maryland
-* Research in Digital Markets 
-* Mobile Apps, Firm Generated Content, Privacy, Crowdfunding
-]
+
+
+---
+# E-Commerce and Mobile Marketing
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "https://cdn-clalk.nitrocdn.com/KqmKVeLhgFAzHWrUbBzmAbRgoFMrOqoq/assets/images/optimized/rev-1781527/wp-public-fs.s3.ap-south-1.amazonaws.com/tasks/1606acd1518079ceb5fd570f8afa6ceb5e03714e2b442d/images/1-608108eec809b.png"
+knitr::include_graphics(url)
+```
+
+.font80[Source: [Moengage/Hootsuite (2021)](https://moengage.com/learn/mobile-marketing-statistics-and-trends/)]
 
 ---
 class: inverse, center, middle
 
-# Mobile App Adoption and Multichannel Purchasing
+# What are the impacts of app creation on product adoption and purchase behaviour?
 
 ---
 class: font140
 # Motivation 
 
-**Strategic Question**: Does the introduction of a mobile app provide necessary ROI?
+**Strategic Question**: Does the introduction of a mobile app increase consumer spending?
 
-* Particularly in highly competitive industries
+* The focus: in "highly competitive" industries
+
+`r icons::fontawesome("question", style = "solid")` Think about when you have downloaded a new app from a company, how does it effect: 
+
+* How much you search for products from that company? From competitors?
+* How much you spend on products from that company? From competitors?
+* Do you download competing firms apps too?
+* Are the changes in behaviour persistent over time?
+
+---
+class: font140
+# Motivation 
+
+**Strategic Question**: Does the introduction of a mobile app increase consumer spending?
+
+* The focus: in "highly competitive" industries
 
 Why Relevant?
 
@@ -259,7 +308,7 @@ But findings suggest this **might not always be the case**
 ---
 class: inverse, center, middle
 
-# Real Time in App Targeting
+# Is there value in targeting consumers based on app use in real time?
 
 ---
 class: font150
@@ -267,6 +316,19 @@ class: font150
 
 **Strategic Question**: Does Real Time Targeting lead to more consumer engagement with the firm?
 
+* Real Time Targeting: (Personalized) Messages delivered based on specific actions 
+
+`r icons::fontawesome("question", style = "solid")` Suppose you are on Zalando app browsing for pair of shoes and you are sent a real time promotion: 
+
+* Would you respond differently if the promotion is sent when you are on a "search page" vs a "product page"? why?
+* Does the type of promotion, i.e. discount vs loyalty points matter? Why?
+* How does this kind of promotion make you feel?
+
+---
+class: font150
+# Motivation
+
+**Strategic Question**: Does Real Time Targeting lead to more consumer engagement with the firm?
 
 Why Relevant?
 
@@ -385,7 +447,8 @@ class: font150
 ---
 class: inverse, center, middle
 
-# Spillover Effects and Freemium Strategies 
+# Should a firm release both free and paid version of an app?
+
 
 ---
 class: font150
@@ -393,6 +456,18 @@ class: font150
 
 **Strategic Question**: When is offering a free version of an app alongside a paid version effective?
 
+`r icons::fontawesome("question", style = "solid")` Think about browsing for a new app, and you find both a free version of an app and a paid version: 
+
+* Which will you download first? Why?
+* Suppose you download the free version first, when will you switch to the paid app?
+
+
+
+---
+class: font150
+# Motivation
+
+**Strategic Question**: When is offering a free version of an app alongside a paid version effective?
 
 Why Relevant?
 
@@ -517,11 +592,11 @@ class: font150
 Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
-@misc{deerdsms2022,
+@misc{deerdsms2023,
       title={"Digital and Social Media Strategies: Mobile Marketing"},
       author={Lachlan Deer},
-      year={2022},
-      url = "https://github.com/tisem-digital-marketing/dsms-lecture-template"
+      year={2023},
+      url = "https://github.com/deer-marketing-lab/dsms-lecture-mobile"
 }
 ```
 
