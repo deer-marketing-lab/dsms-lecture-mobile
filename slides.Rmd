@@ -402,7 +402,7 @@ knitr::include_graphics(url)
 * How do we see this? 95% Confidence intervals overlap
 
 ---
-class: font150
+class: font130
 # Prior Purchase and Late Stage RTT
 
 ```{r, echo = FALSE, fig.align = "center", out.width="90%"}
@@ -410,12 +410,17 @@ url <- "figs/rtt_attenuate_late.png"
 knitr::include_graphics(url)
 ```
 
-.center[**Prior purchase history decreases effectivess of late state RTT**]
+.center[**Prior purchase history decreases effectivess of late stage RTT**]
 
-* Remark: Unclear how they define prior purchases...
+How do you see this?
+
+* Interactions of ART and prior purchases in all columns are negative and statistically significant
+
+
+.font80[Remark: Unclear how they define prior purchases...]
 
 ---
-class: font150
+class: font130
 # Prior Purchase and Early Stage RTT
 
 
@@ -424,7 +429,12 @@ url <- "figs/rtt_amplify_early.png"
 knitr::include_graphics(url)
 ```
 
-.center[**Prior purchase history amplifies effectivess of late state RTT**]
+.center[**Prior purchase history amplifies effectivess of early stage high RTT on future shopping decisions**]
+
+How do you see this?
+
+* Interactions in Columns (1) and (2) insignificant $\implies$ no effect on immediate behaviour
+* Interaction between ART High and prior purchase are positive and statistically significant in columns (3) to (6) 
 
 ---
 class: font150
@@ -514,10 +524,10 @@ knitr::include_graphics(url)
 ```
 
 ---
-class: font160
+class: font120
 # Product Sampling?
 
-```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
 url <- "figs/freemium_star_rating.png"
 knitr::include_graphics(url)
 ```
@@ -525,6 +535,11 @@ knitr::include_graphics(url)
 .center[
 **Inverted U-shape** $\rightarrow$ greatest effect for moderate star ratings
 ]
+
+How to see this? 
+
+* Coefficient on star ratings pre-release squared is positive and coefficient on star ratings pre-release squared is negative 
+* $\implies$ relationship is concave 
 
 ---
 class: font120
